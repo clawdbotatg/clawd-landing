@@ -506,11 +506,13 @@ const Home: NextPage = () => {
           {[
             "idea-labs",
             "clawd-fomo3d-v2",
+            "clawdfomo3d",
             "clawd-token-hub",
             "clawd-vesting",
             "sponsored-8004-registration",
             "agent-bounty-board",
             "clawfomo-fallback",
+            "clawd-landing",
             "bot-wallet-guide",
             "howto8004",
             "register-8004",
