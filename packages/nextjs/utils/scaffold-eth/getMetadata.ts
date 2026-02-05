@@ -5,12 +5,13 @@ const baseUrl = process.env.NEXT_PUBLIC_PRODUCTION_URL
   : process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : `http://localhost:${process.env.PORT || 3000}`;
-const titleTemplate = "%s | Clawd";
+
+const titleTemplate = "%s";
 
 export const getMetadata = ({
   title,
   description,
-  imageRelativePath = "/thumbnail.jpg",
+  imageRelativePath = "/thumbnail.png",
 }: {
   title: string;
   description: string;
@@ -38,6 +39,7 @@ export const getMetadata = ({
       ],
     },
     twitter: {
+      card: "summary_large_image",
       title: {
         default: title,
         template: titleTemplate,

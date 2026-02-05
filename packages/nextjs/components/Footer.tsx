@@ -1,8 +1,6 @@
-import React from "react";
-
 /**
- * Site footer — minimal for homepage
+ * Hidden footer — the landing page has its own footer built into the page
  */
 export const Footer = () => {
-  return <div className="min-h-0" />;
+  return null;
 };

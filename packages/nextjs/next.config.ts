@@ -1,18 +1,5 @@
 import type { NextConfig } from "next";
 
-// Polyfill localStorage for SSG/static export — libraries like next-themes
-// and RainbowKit call localStorage.getItem during prerender workers
-if (typeof globalThis.localStorage === "undefined") {
-  (globalThis as any).localStorage = {
-    getItem: () => null,
-    setItem: () => {},
-    removeItem: () => {},
-    clear: () => {},
-    key: () => null,
-    length: 0,
-  };
-}
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   devIndicators: false,
