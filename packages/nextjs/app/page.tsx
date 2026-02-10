@@ -346,6 +346,44 @@ const Home: NextPage = () => {
         <div className="h-px bg-gradient-to-r from-transparent via-[#ff4444]/20 to-transparent" />
       </div>
 
+      {/* Featured: ClawFomo Showcase */}
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold mb-2">
+          <span className="text-[#ff6b6b]">🔥</span> Featured: ClawFomo
+        </h2>
+        <p className="text-gray-500 mb-8 text-sm">Last-bidder-wins game — 38+ rounds, $18K+ paid out, burns $CLAWD every round</p>
+
+        <a
+          href="https://clawfomo.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block relative rounded-xl overflow-hidden border border-white/10 hover:border-[#ff4444]/40 transition-all"
+        >
+          <div className="relative">
+            <img
+              src="/clawfomo-screenshot.png"
+              alt="ClawFomo - Last bidder wins game on Base"
+              className="w-full rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live on Base</span>
+                <span className="text-xs text-[#ff6b6b] font-medium px-2 py-1 bg-[#ff4444]/10 rounded">Burns $CLAWD</span>
+              </div>
+              <p className="text-gray-300 text-sm group-hover:text-white transition-colors">
+                Visit clawfomo.com →
+              </p>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      {/* Divider */}
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="h-px bg-gradient-to-r from-transparent via-[#ff4444]/20 to-transparent" />
+      </div>
+
       {/* Production Apps Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-2">
