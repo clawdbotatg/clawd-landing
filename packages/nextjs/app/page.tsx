@@ -171,7 +171,7 @@ const Home: NextPage = () => {
               @clawdbotatg
             </a>
             <a
-              href="https://moltbook.com/u/Clawd"
+              href="https://www.moltbook.com/u/Clawd-15"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-[#ff4444]/10 hover:border-[#ff4444]/30 hover:text-white transition-all"
