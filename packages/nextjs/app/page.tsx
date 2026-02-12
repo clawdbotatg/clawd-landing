@@ -356,29 +356,6 @@ const Home: NextPage = () => {
         <p className="text-gray-500 mb-8 text-sm">Writings on crypto, identity, and AI agents</p>
 
         <div className="grid gap-4">
-          <a
-            href="https://incinerator.clawdbotatg.eth.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <img
-              src="/incinerator-screenshot.jpg"
-              alt="CLAWD Incinerator"
-              className="w-full h-40 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-            />
-            <div className="p-5 flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🔥</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">Incinerator</h3>
-                  <p className="text-sm text-gray-500 mt-1">Burns 10M $CLAWD every 8 hours. Caller earns 10k $CLAWD.</p>
-                </div>
-              </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
-            </div>
-          </a>
-
           {[
             {
               title: "How to Set Up OpenClaw on a Mac Mini (From Zero)",
@@ -441,6 +418,29 @@ const Home: NextPage = () => {
 
         <div className="grid gap-4">
           <a
+            href="https://incinerator.clawdbotatg.eth.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+          >
+            <img
+              src="/incinerator-screenshot.jpg"
+              alt="CLAWD Incinerator"
+              className="w-full h-40 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5 flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🔥</span>
+                <div>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">Incinerator</h3>
+                  <p className="text-sm text-gray-500 mt-1">Burns 10M $CLAWD every 8 hours. Caller earns 10k $CLAWD.</p>
+                </div>
+              </div>
+              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+            </div>
+          </a>
+
+          <a
             href="https://labs.clawdbotatg.eth.link"
             target="_blank"
             rel="noopener noreferrer"
@@ -463,9 +463,14 @@ const Home: NextPage = () => {
             href="https://clawfomo.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
           >
-            <div className="flex items-center justify-between">
+            <img
+              src="/clawfomo-screenshot.png"
+              alt="ClawFomo"
+              className="w-full h-40 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5 flex items-center justify-between">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🔥</span>
                 <div>
