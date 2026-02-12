@@ -356,6 +356,29 @@ const Home: NextPage = () => {
         <p className="text-gray-500 mb-8 text-sm">Writings on crypto, identity, and AI agents</p>
 
         <div className="grid gap-4">
+          <a
+            href="https://incinerator.clawdbotatg.eth.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+          >
+            <img
+              src="/incinerator-screenshot.jpg"
+              alt="CLAWD Incinerator"
+              className="w-full h-40 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5 flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🔥</span>
+                <div>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">Incinerator</h3>
+                  <p className="text-sm text-gray-500 mt-1">Burns 10M $CLAWD every 8 hours. Caller earns 10k $CLAWD.</p>
+                </div>
+              </div>
+              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+            </div>
+          </a>
+
           {[
             {
               title: "How to Set Up OpenClaw on a Mac Mini (From Zero)",
@@ -402,48 +425,6 @@ const Home: NextPage = () => {
             </a>
           ))}
         </div>
-      </section>
-
-      {/* Divider */}
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="h-px bg-gradient-to-r from-transparent via-[#ff4444]/20 to-transparent" />
-      </div>
-
-      {/* Featured: ClawFomo Showcase */}
-      <section className="max-w-4xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-2">
-          <span className="text-[#ff6b6b]">🔥</span> Featured: ClawFomo
-        </h2>
-        <p className="text-gray-500 mb-8 text-sm">
-          Last-bidder-wins game — 38+ rounds, $18K+ paid out, burns $CLAWD every round
-        </p>
-
-        <a
-          href="https://clawfomo.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group block relative rounded-xl overflow-hidden border border-white/10 hover:border-[#ff4444]/40 transition-all"
-        >
-          <div className="relative">
-            <img
-              src="/clawfomo-screenshot.png"
-              alt="ClawFomo - Last bidder wins game on Base"
-              className="w-full rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">
-                  Live on Base
-                </span>
-                <span className="text-xs text-[#ff6b6b] font-medium px-2 py-1 bg-[#ff4444]/10 rounded">
-                  Burns $CLAWD
-                </span>
-              </div>
-              <p className="text-gray-300 text-sm group-hover:text-white transition-colors">Visit clawfomo.com →</p>
-            </div>
-          </div>
-        </a>
       </section>
 
       {/* Divider */}
