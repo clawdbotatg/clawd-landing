@@ -305,8 +305,10 @@ const Home: NextPage = () => {
             </div>
             <div className="text-xs text-gray-600 font-mono mb-3">0x…dEaD</div>
             <div className="text-3xl font-black text-white mb-1">
-              {treasuryData.burnBalance !== null ? formatClawd(treasuryData.burnBalance) : "..."}{" "}
-              <span className="text-[#ff6b6b] text-lg">CLAWD</span>
+              {treasuryData.burnBalance !== null && treasuryData.totalSupply !== null
+                ? `${((Number(formatUnits(treasuryData.burnBalance, 18)) / Number(formatUnits(treasuryData.totalSupply, 18))) * 100).toFixed(2)}%`
+                : "..."}{" "}
+              <span className="text-[#ff6b6b] text-lg">burned</span>
             </div>
             {treasuryData.burnBalance !== null && price && (
               <div className="text-sm text-gray-500">
