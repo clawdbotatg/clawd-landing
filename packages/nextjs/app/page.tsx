@@ -299,6 +299,10 @@ const Home: NextPage = () => {
         <div className="grid gap-4">
           {[
             {
+              title: "How to Set Up OpenClaw on a Mac Mini (From Zero)",
+              url: "/guides/openclaw-mac-mini-from-zero",
+            },
+            {
               title: "Why Crypto Matters for Bots",
               url: "https://moltbook.com/post/09a6e6ed-63c3-4306-8873-bf30dc6b4a35",
             },
@@ -351,7 +355,9 @@ const Home: NextPage = () => {
         <h2 className="text-3xl font-bold mb-2">
           <span className="text-[#ff6b6b]">🔥</span> Featured: ClawFomo
         </h2>
-        <p className="text-gray-500 mb-8 text-sm">Last-bidder-wins game — 38+ rounds, $18K+ paid out, burns $CLAWD every round</p>
+        <p className="text-gray-500 mb-8 text-sm">
+          Last-bidder-wins game — 38+ rounds, $18K+ paid out, burns $CLAWD every round
+        </p>
 
         <a
           href="https://clawfomo.com"
@@ -368,12 +374,14 @@ const Home: NextPage = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live on Base</span>
-                <span className="text-xs text-[#ff6b6b] font-medium px-2 py-1 bg-[#ff4444]/10 rounded">Burns $CLAWD</span>
+                <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">
+                  Live on Base
+                </span>
+                <span className="text-xs text-[#ff6b6b] font-medium px-2 py-1 bg-[#ff4444]/10 rounded">
+                  Burns $CLAWD
+                </span>
               </div>
-              <p className="text-gray-300 text-sm group-hover:text-white transition-colors">
-                Visit clawfomo.com →
-              </p>
+              <p className="text-gray-300 text-sm group-hover:text-white transition-colors">Visit clawfomo.com →</p>
             </div>
           </div>
         </a>
@@ -629,8 +637,20 @@ const Home: NextPage = () => {
                 t: "6/6",
                 cid: "bafybeiapxjiqph4nge4dgasu37jhmxvjaae7b2v74g2ui6tdf25h4wjvou",
               },
-              { n: "Chat", c: "0x33f97501921e40c56694b259115b89b6a6ee5500", p: "On-chain messaging system", t: "4/4", cid: "bafybeienfkhznrbivegaqzjksjpvk5gxg2idi6uh7dqay2jsvl7b5pb7ee" },
-              { n: "Vote", c: "0xf86D964188115AFc8DBB54d088164f624B916442", p: "Simple on-chain voting", t: "5/5", cid: "bafybeieogrr6jvq57neruu4syxa4puvdwnr4cftimyreagwp3b63wlppvy" },
+              {
+                n: "Chat",
+                c: "0x33f97501921e40c56694b259115b89b6a6ee5500",
+                p: "On-chain messaging system",
+                t: "4/4",
+                cid: "bafybeienfkhznrbivegaqzjksjpvk5gxg2idi6uh7dqay2jsvl7b5pb7ee",
+              },
+              {
+                n: "Vote",
+                c: "0xf86D964188115AFc8DBB54d088164f624B916442",
+                p: "Simple on-chain voting",
+                t: "5/5",
+                cid: "bafybeieogrr6jvq57neruu4syxa4puvdwnr4cftimyreagwp3b63wlppvy",
+              },
               {
                 n: "PFP",
                 c: "0x0dD551Df233cA7B4CE45e2f4bb17faB3c0b53647",
@@ -652,13 +672,55 @@ const Home: NextPage = () => {
                 t: "3/3",
                 cid: "bafybeihzyisdq6pymqt5dniuo7exrdpkjxfndxqnjsksgz5kqgprkaihoy",
               },
-              { n: "Faucet", c: "0xbCdB4010fe2b5f349590a613675A685A8DFC0104", p: "Token faucet for CLAWD", t: "4/4", cid: "bafybeidtkmxaobbdsepdtmnbg47dneydm3wgazq6bzy6dm3owz225fpb7q" },
-              { n: "Tip", c: "0x25BF19565b301ab262407DfBfA307ed2cA3306f0", p: "Send tips to builders", t: "3/3", cid: "bafybeieywyoygaz3th56z3jfniz633smgd4jxqiyolzbzj6nwgfu6cpqw4" },
-              { n: "Stake", c: "0xff887F760eb18fdCcF7eD2412272b30aa36305F0", p: "Stake CLAWD for rewards", t: "5/5", cid: "bafybeid6a6dapt6ri6huruycmjglfc7fezqhs5kvydzmfceuqhid3ryzqe" },
-              { n: "Raffle", c: "0xD42fCb8a504829008F8E5d5fba9C6233AE56c297", p: "On-chain raffle system", t: "4/4", cid: "bafybeiaodbhw7azgramwuca63ki76pmlwxuyevd3maleexaj3r3m7uxw2a" },
-              { n: "Bounty", c: "0x3797710f9ff1FA1Cf0Bf014581e4651845d75530", p: "Post and claim bounties", t: "5/5", cid: "bafybeicwtxczdwgeyim2o42aqntnpvnm6hbbineccyj3f4w5gxkztux6iu" },
-              { n: "Escrow", c: "0xc1615196Fceba7d71a93c854e349C9c8B780338a", p: "Trustless P2P escrow", t: "4/4", cid: "bafybeiehpukt4dekydj2py375lizaf34lemxfzxdyeuhimfkwiv3njwyci" },
-              { n: "wCLAWD", c: "0xFd2e32B82Af54CB89a4D30b23966E38bDe8e5A9E", p: "Wrapped CLAWD (ERC20)", t: "3/3", cid: "bafybeie3p4hszcfv5qc7xutxtrxjxi6dsusshszrf355fm6t5dxmol7xzi" },
+              {
+                n: "Faucet",
+                c: "0xbCdB4010fe2b5f349590a613675A685A8DFC0104",
+                p: "Token faucet for CLAWD",
+                t: "4/4",
+                cid: "bafybeidtkmxaobbdsepdtmnbg47dneydm3wgazq6bzy6dm3owz225fpb7q",
+              },
+              {
+                n: "Tip",
+                c: "0x25BF19565b301ab262407DfBfA307ed2cA3306f0",
+                p: "Send tips to builders",
+                t: "3/3",
+                cid: "bafybeieywyoygaz3th56z3jfniz633smgd4jxqiyolzbzj6nwgfu6cpqw4",
+              },
+              {
+                n: "Stake",
+                c: "0xff887F760eb18fdCcF7eD2412272b30aa36305F0",
+                p: "Stake CLAWD for rewards",
+                t: "5/5",
+                cid: "bafybeid6a6dapt6ri6huruycmjglfc7fezqhs5kvydzmfceuqhid3ryzqe",
+              },
+              {
+                n: "Raffle",
+                c: "0xD42fCb8a504829008F8E5d5fba9C6233AE56c297",
+                p: "On-chain raffle system",
+                t: "4/4",
+                cid: "bafybeiaodbhw7azgramwuca63ki76pmlwxuyevd3maleexaj3r3m7uxw2a",
+              },
+              {
+                n: "Bounty",
+                c: "0x3797710f9ff1FA1Cf0Bf014581e4651845d75530",
+                p: "Post and claim bounties",
+                t: "5/5",
+                cid: "bafybeicwtxczdwgeyim2o42aqntnpvnm6hbbineccyj3f4w5gxkztux6iu",
+              },
+              {
+                n: "Escrow",
+                c: "0xc1615196Fceba7d71a93c854e349C9c8B780338a",
+                p: "Trustless P2P escrow",
+                t: "4/4",
+                cid: "bafybeiehpukt4dekydj2py375lizaf34lemxfzxdyeuhimfkwiv3njwyci",
+              },
+              {
+                n: "wCLAWD",
+                c: "0xFd2e32B82Af54CB89a4D30b23966E38bDe8e5A9E",
+                p: "Wrapped CLAWD (ERC20)",
+                t: "3/3",
+                cid: "bafybeie3p4hszcfv5qc7xutxtrxjxi6dsusshszrf355fm6t5dxmol7xzi",
+              },
               {
                 n: "Timelock",
                 c: "0x35F5c4308D075C0b2Ee27Dd2377e218f887B0CA3",
@@ -673,8 +735,20 @@ const Home: NextPage = () => {
                 t: "5/5",
                 cid: "bafybeieypv7kevd7esztrevlhfmohfjhbn3h7najgkkjou2abjp4tsnnsu",
               },
-              { n: "Leaderboard", c: "0xC540f42d47119Eb8E5AAbcE3bf0Ef8b638dCB27c", p: "On-chain rankings", t: "3/3", cid: "bafybeidxjohdn6s2neqfwhgs3y3ypgghyu2fwgp7us66pvde6ch5nn6qqu" },
-              { n: "Predict", c: "0x68c1DBD7896BDEeC7cc43838D5050737c043De1D", p: "Prediction markets", t: "4/4", cid: "bafybeibzvict2omq4u5uuknysxgbieu3c2eezk7ny7xlymn5hg7f4vs67e" },
+              {
+                n: "Leaderboard",
+                c: "0xC540f42d47119Eb8E5AAbcE3bf0Ef8b638dCB27c",
+                p: "On-chain rankings",
+                t: "3/3",
+                cid: "bafybeidxjohdn6s2neqfwhgs3y3ypgghyu2fwgp7us66pvde6ch5nn6qqu",
+              },
+              {
+                n: "Predict",
+                c: "0x68c1DBD7896BDEeC7cc43838D5050737c043De1D",
+                p: "Prediction markets",
+                t: "4/4",
+                cid: "bafybeibzvict2omq4u5uuknysxgbieu3c2eezk7ny7xlymn5hg7f4vs67e",
+              },
               {
                 n: "Streaks",
                 c: "0xb8Fc92aBfBBe782015c6c248fed612dE3A21fFD7",
@@ -682,7 +756,13 @@ const Home: NextPage = () => {
                 t: "3/3",
                 cid: "bafybeic3tv3f2bte3mgu7lqm7ecfpwhczxogevm7aqu22qw5yrkfp6uzpu",
               },
-              { n: "Tribute", c: "0x7dA13fAc147b2daCffC538558F7E9BfeeF22C586", p: "Donate to the protocol", t: "3/3", cid: "bafybeibl22zucr2yax5umxzzndfhfirnlppz63l5zpkfiuq2qkuwztd75i" },
+              {
+                n: "Tribute",
+                c: "0x7dA13fAc147b2daCffC538558F7E9BfeeF22C586",
+                p: "Donate to the protocol",
+                t: "3/3",
+                cid: "bafybeibl22zucr2yax5umxzzndfhfirnlppz63l5zpkfiuq2qkuwztd75i",
+              },
               {
                 n: "Registry",
                 c: "0x90F75E14336C8a1385A40115Ff258E8D2A790E7d",
@@ -697,7 +777,13 @@ const Home: NextPage = () => {
                 t: "4/4",
                 cid: "bafybeid3nm7wyiiwosbcmmpwf4ip32mvlrkmgrheefpyqnpy2ghnyx5wb4",
               },
-              { n: "Splitter", c: "0xf69E0Be99D7564C8e446437Ed2efc9f639454435", p: "Revenue splitting", t: "3/3", cid: "bafkreiaxxgoq3n6brd5jz7cnf4q4y7ydxjo3aia2dpxsfrmgz3lx2tkoju" },
+              {
+                n: "Splitter",
+                c: "0xf69E0Be99D7564C8e446437Ed2efc9f639454435",
+                p: "Revenue splitting",
+                t: "3/3",
+                cid: "bafkreiaxxgoq3n6brd5jz7cnf4q4y7ydxjo3aia2dpxsfrmgz3lx2tkoju",
+              },
               {
                 n: "Pledge",
                 c: "0x00BBE533b0a2aFAC940E845Fa672F0f3D271dC78",
@@ -719,9 +805,21 @@ const Home: NextPage = () => {
                 t: "5/5",
                 cid: "bafkreihdtmazu7c25fvgj3djpz4njjxsvbcsv7r74ia3e7jil2hnmhvykq",
               },
-              { n: "Airdrop", c: "0x544423D9039c470370903e360a9060948895898C", p: "Merkle-tree airdrops", t: "4/4", cid: "" },
+              {
+                n: "Airdrop",
+                c: "0x544423D9039c470370903e360a9060948895898C",
+                p: "Merkle-tree airdrops",
+                t: "4/4",
+                cid: "",
+              },
               { n: "Swap", c: "0xCbDb6A95058d4A9552FB2cD9734146a4554c6c4a", p: "Simple token swap", t: "3/3", cid: "" },
-              { n: "Vault", c: "0xB6360b93263C564f73435d10CEd362BD9fe67295", p: "Time-locked token vault", t: "4/4", cid: "" },
+              {
+                n: "Vault",
+                c: "0xB6360b93263C564f73435d10CEd362BD9fe67295",
+                p: "Time-locked token vault",
+                t: "4/4",
+                cid: "",
+              },
               {
                 n: "Delegate",
                 c: "0xdB4Bf2fb4F00C8F5303d1506bD1C04A906dBc3C1",
@@ -729,7 +827,13 @@ const Home: NextPage = () => {
                 t: "3/3",
                 cid: "",
               },
-              { n: "Quest", c: "0x2370D29f65a23AAbF73Dea7cD649236C7d236f22", p: "On-chain quest system", t: "4/4", cid: "" },
+              {
+                n: "Quest",
+                c: "0x2370D29f65a23AAbF73Dea7cD649236C7d236f22",
+                p: "On-chain quest system",
+                t: "4/4",
+                cid: "",
+              },
               {
                 n: "Snapshot",
                 c: "0x7E3afc31693be7999dc6a0dF111dBfF00E1E4626",
@@ -744,9 +848,27 @@ const Home: NextPage = () => {
                 t: "3/3",
                 cid: "",
               },
-              { n: "Poll", c: "0x221f5d120a0aF5ffBfD54AD9A943e2fD3350C8AB", p: "Multiple choice polls", t: "4/4", cid: "" },
-              { n: "Roulette", c: "0x7f15D58fa7E00279DF43A50d0C62FA5FB9f9abf2", p: "On-chain roulette", t: "3/3", cid: "" },
-              { n: "Subscription", c: "0x0FC1ba72F1406314845d61E1bA5075e950288e62", p: "Recurring payments", t: "4/4", cid: "" },
+              {
+                n: "Poll",
+                c: "0x221f5d120a0aF5ffBfD54AD9A943e2fD3350C8AB",
+                p: "Multiple choice polls",
+                t: "4/4",
+                cid: "",
+              },
+              {
+                n: "Roulette",
+                c: "0x7f15D58fa7E00279DF43A50d0C62FA5FB9f9abf2",
+                p: "On-chain roulette",
+                t: "3/3",
+                cid: "",
+              },
+              {
+                n: "Subscription",
+                c: "0x0FC1ba72F1406314845d61E1bA5075e950288e62",
+                p: "Recurring payments",
+                t: "4/4",
+                cid: "",
+              },
               {
                 n: "Coupon",
                 c: "0x4cA8Ba6fb0e057a593540f96A83f3639EC81e8cc",
@@ -782,9 +904,27 @@ const Home: NextPage = () => {
                 t: "5/5",
                 cid: "",
               },
-              { n: "Relay", c: "0x05De3bcD691Db6803749eFB3ED4A6a898C81A827", p: "Gasless meta-tx relay", t: "3/3", cid: "" },
-              { n: "Charity", c: "0xc90ab2035c0FB846D8Ec258be9c9B54B129B0b9b", p: "Transparent donations", t: "3/3", cid: "" },
-              { n: "Insurance", c: "0x69B0195b7dE86754295760A61FebAebFcE5aEeFB", p: "P2P insurance pools", t: "4/4", cid: "" },
+              {
+                n: "Relay",
+                c: "0x05De3bcD691Db6803749eFB3ED4A6a898C81A827",
+                p: "Gasless meta-tx relay",
+                t: "3/3",
+                cid: "",
+              },
+              {
+                n: "Charity",
+                c: "0xc90ab2035c0FB846D8Ec258be9c9B54B129B0b9b",
+                p: "Transparent donations",
+                t: "3/3",
+                cid: "",
+              },
+              {
+                n: "Insurance",
+                c: "0x69B0195b7dE86754295760A61FebAebFcE5aEeFB",
+                p: "P2P insurance pools",
+                t: "4/4",
+                cid: "",
+              },
               {
                 n: "Referral",
                 c: "0x4F14931213F0563392e043d0C9a72064D61272d2",
@@ -799,7 +939,13 @@ const Home: NextPage = () => {
                 t: "3/3",
                 cid: "",
               },
-              { n: "Duel", c: "0x0B366b3ab023aD7BE61E00cdFF674aAE6d3884BB", p: "1v1 on-chain wagers", t: "4/4", cid: "" },
+              {
+                n: "Duel",
+                c: "0x0B366b3ab023aD7BE61E00cdFF674aAE6d3884BB",
+                p: "1v1 on-chain wagers",
+                t: "4/4",
+                cid: "",
+              },
               {
                 n: "Forge",
                 c: "0xB9A7926421d969Ed4498acAE2c35ddf95d591cEA",
@@ -807,7 +953,13 @@ const Home: NextPage = () => {
                 t: "3/3",
                 cid: "",
               },
-              { n: "Payroll", c: "0x767F82f7c97130551F6159950CB382f1D6052157", p: "Automated payroll", t: "4/4", cid: "" },
+              {
+                n: "Payroll",
+                c: "0x767F82f7c97130551F6159950CB382f1D6052157",
+                p: "Automated payroll",
+                t: "4/4",
+                cid: "",
+              },
               {
                 n: "Grant",
                 c: "0x77d01bD547C565b2729f82bd42ceF578f7B31892",
