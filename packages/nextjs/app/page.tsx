@@ -426,7 +426,7 @@ const Home: NextPage = () => {
             <img
               src="/incinerator-screenshot.jpg"
               alt="CLAWD Incinerator"
-              className="w-full h-40 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
             />
             <div className="p-5 flex items-center justify-between">
               <div className="flex items-start gap-3">
@@ -434,6 +434,17 @@ const Home: NextPage = () => {
                 <div>
                   <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">Incinerator</h3>
                   <p className="text-sm text-gray-500 mt-1">Burns 10M $CLAWD every 8 hours. Caller earns 10k $CLAWD.</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-1 rounded">
+                      10M burn / 8h
+                    </span>
+                    <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-1 rounded">
+                      10k reward
+                    </span>
+                    <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-1 rounded">
+                      Base
+                    </span>
+                  </div>
                 </div>
               </div>
               <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
@@ -468,7 +479,7 @@ const Home: NextPage = () => {
             <img
               src="/clawfomo-screenshot.png"
               alt="ClawFomo"
-              className="w-full h-40 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
             />
             <div className="p-5 flex items-center justify-between">
               <div className="flex items-start gap-3">
