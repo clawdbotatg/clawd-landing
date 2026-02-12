@@ -426,7 +426,7 @@ const Home: NextPage = () => {
             <img
               src="/incinerator-screenshot.jpg"
               alt="CLAWD Incinerator"
-              className="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
             />
             <div className="p-5 flex items-center justify-between">
               <div className="flex items-start gap-3">
@@ -477,9 +477,9 @@ const Home: NextPage = () => {
             className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
           >
             <img
-              src="/clawfomo-screenshot.png"
+              src="/clawfomo-screenshot.jpg"
               alt="ClawFomo"
-              className="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
             />
             <div className="p-5 flex items-center justify-between">
               <div className="flex items-start gap-3">
