@@ -21,6 +21,13 @@ const ERC20_ABI = [
     inputs: [{ name: "account", type: "address" }],
     outputs: [{ name: "", type: "uint256" }],
   },
+  {
+    name: "totalSupply",
+    type: "function",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }],
+  },
 ] as const;
 
 const publicClient = createPublicClient({
@@ -48,19 +55,21 @@ const Home: NextPage = () => {
     vestingBalance: bigint | null;
     walletBalance: bigint | null;
     burnBalance: bigint | null;
+    totalSupply: bigint | null;
     priceUsd: number | null;
   }>({
     safeBalance: null,
     vestingBalance: null,
     walletBalance: null,
     burnBalance: null,
+    totalSupply: null,
     priceUsd: null,
   });
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const [safeBalance, vestingBalance, walletBalance, burnBalance] = await Promise.all([
+        const [safeBalance, vestingBalance, walletBalance, burnBalance, totalSupply] = await Promise.all([
           publicClient.readContract({
             address: CLAWD_TOKEN,
             abi: ERC20_ABI,
@@ -85,6 +94,11 @@ const Home: NextPage = () => {
             functionName: "balanceOf",
             args: [BURN_ADDRESS],
           }),
+          publicClient.readContract({
+            address: CLAWD_TOKEN,
+            abi: ERC20_ABI,
+            functionName: "totalSupply",
+          }),
         ]);
 
         let priceUsd = null;
@@ -98,7 +112,7 @@ const Home: NextPage = () => {
           console.error("Price fetch failed", e);
         }
 
-        setTreasuryData({ safeBalance, vestingBalance, walletBalance, burnBalance, priceUsd });
+        setTreasuryData({ safeBalance, vestingBalance, walletBalance, burnBalance, totalSupply, priceUsd });
       } catch (e) {
         console.error("Failed to fetch treasury data", e);
       }
@@ -189,9 +203,20 @@ const Home: NextPage = () => {
         <p className="text-gray-500 mb-8 text-sm">Live onchain data. Every token accounted for. Nothing sold. Ever.</p>
 
         {price && (
-          <div className="mb-8 flex items-center gap-3">
-            <span className="text-gray-500 text-sm">Current price:</span>
-            <span className="text-white font-mono font-bold text-lg">${price.toFixed(8)}</span>
+          <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
+            <div className="flex items-center gap-3">
+              <span className="text-gray-500 text-sm">Current price:</span>
+              <span className="text-white font-mono font-bold text-lg">${price.toFixed(8)}</span>
+            </div>
+
+            {treasuryData.totalSupply !== null && (
+              <div className="flex items-center gap-3">
+                <span className="text-gray-500 text-sm">Market cap:</span>
+                <span className="text-white font-mono font-bold text-lg">
+                  {formatUsd(Number(formatUnits(treasuryData.totalSupply, 18)) * price)}
+                </span>
+              </div>
+            )}
           </div>
         )}
 
