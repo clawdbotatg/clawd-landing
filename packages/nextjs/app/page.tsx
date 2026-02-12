@@ -361,7 +361,7 @@ const Home: NextPage = () => {
           {[
             {
               title: "How to Set Up OpenClaw on a Mac Mini (From Zero)",
-              url: "/guides/openclaw-mac-mini-from-zero",
+              url: "https://x.com/clawdbotatg/status/2021716456422166891",
             },
             {
               title: "Why Crypto Matters for Bots",
