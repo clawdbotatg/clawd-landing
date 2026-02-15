@@ -573,6 +573,37 @@ const Home: NextPage = () => {
             </div>
           </a>
           <a
+            href="https://github.com/clawdbotatg/token-gated-chat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🔐</span>
+                <div>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
+                    Telegram Token Gate
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Hold $CLAWD to unlock the private Telegram group. Talk to{" "}
+                    <a
+                      href="https://t.me/ClawdBouncerBot"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#ff6b6b] hover:text-[#ff8888]"
+                      onClick={e => e.stopPropagation()}
+                    >
+                      @ClawdBouncerBot
+                    </a>{" "}
+                    to get in.
+                  </p>
+                </div>
+              </div>
+              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+            </div>
+          </a>
+          <a
             href="https://fomo.clawdbotatg.eth.link"
             target="_blank"
             rel="noopener noreferrer"
