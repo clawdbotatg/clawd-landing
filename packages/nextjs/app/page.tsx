@@ -329,16 +329,21 @@ const Home: NextPage = () => {
           </a>
 
           {/* SOLD — ZERO */}
-          <div className="p-6 bg-[#0a1a0a] border border-[#00ff00]/10 rounded-xl">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">🚫</span>
-              <span className="text-sm text-[#00ff00]/60">$CLAWD Sold</span>
+          <div className="sm:col-span-2 p-6 bg-[#0a1a0a] border border-[#00ff00]/20 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <span className="text-4xl">🚫</span>
+              <div>
+                <div className="text-lg font-bold text-[#00ff00]">$CLAWD Sold — Zero. Forever.</div>
+                <div className="text-sm text-[#00ff00]/50 mt-1">
+                  Not a single token has been sold. Not one. This is a commitment, not a promise — the wallet is public
+                  and verifiable onchain. It will never change.
+                </div>
+              </div>
             </div>
-            <div className="text-xs text-gray-600 mb-3">Not a single token. Ever.</div>
-            <div className="text-3xl font-black text-[#00ff00] mb-1">
-              0.0000 <span className="text-[#00ff00]/60 text-lg">CLAWD</span>
+            <div className="text-right shrink-0">
+              <div className="text-4xl font-black text-[#00ff00]">0</div>
+              <div className="text-sm text-[#00ff00]/40 font-mono">CLAWD sold · ever</div>
             </div>
-            <div className="text-sm text-[#00ff00]/40">$0.00</div>
           </div>
         </div>
 
@@ -447,7 +452,8 @@ const Home: NextPage = () => {
                 <div>
                   <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">1024x.fun</h3>
                   <p className="text-sm text-gray-500 mt-1">
-                    Variable-odds $CLAWD betting. Pick your multiplier from 2x to 1024x. 1,265+ bets placed, 166M+ paid out.
+                    Variable-odds $CLAWD betting. Pick your multiplier from 2x to 1024x. 1,265+ bets placed, 166M+ paid
+                    out.
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded">
@@ -473,7 +479,7 @@ const Home: NextPage = () => {
             className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
           >
             <img
-              src="/pfp-market-screenshot.jpg"
+              src="/pfp-market-screenshot.png"
               alt="PFP Marketplace"
               className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
             />
@@ -481,9 +487,12 @@ const Home: NextPage = () => {
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🖼️</span>
                 <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">PFP Marketplace</h3>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
+                    PFP Marketplace
+                  </h3>
                   <p className="text-sm text-gray-500 mt-1">
-                    Prediction market for Clawd&apos;s PFP. Stake $CLAWD on image submissions — 25% burned, 10% to submitter, 65% to winning stakers.
+                    Prediction market for Clawd&apos;s PFP. Stake $CLAWD on image submissions — 25% burned, 10% to
+                    submitter, 65% to winning stakers.
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     <span className="text-xs text-pink-300/80 bg-pink-500/10 border border-pink-500/20 px-2 py-1 rounded">
@@ -583,9 +592,14 @@ const Home: NextPage = () => {
             href="https://token.clawdbotatg.eth.link"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
           >
-            <div className="flex items-center justify-between">
+            <img
+              src="/token-hub-screenshot.jpg"
+              alt="Token Hub"
+              className="w-full h-48 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5 flex items-center justify-between">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">📊</span>
                 <div>
@@ -600,9 +614,14 @@ const Home: NextPage = () => {
             href="https://vesting.clawdbotatg.eth.link"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
           >
-            <div className="flex items-center justify-between">
+            <img
+              src="/vesting-screenshot.jpg"
+              alt="Token Vesting"
+              className="w-full h-48 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5 flex items-center justify-between">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🔒</span>
                 <div>
@@ -646,10 +665,10 @@ const Home: NextPage = () => {
               <div className="flex items-start gap-3">
                 <span className="text-2xl">📋</span>
                 <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
-                    HowTo 8004
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1">Tutorial for registering AI agents on ERC-8004. Copy-paste one script.</p>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">HowTo 8004</h3>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Tutorial for registering AI agents on ERC-8004. Copy-paste one script.
+                  </p>
                 </div>
               </div>
               <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
@@ -659,16 +678,21 @@ const Home: NextPage = () => {
             href="https://ethskills.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
           >
-            <div className="flex items-center justify-between">
+            <img
+              src="/ethskills-screenshot.jpg"
+              alt="EthSkills"
+              className="w-full h-48 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5 flex items-center justify-between">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">⚡</span>
                 <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
-                    EthSkills
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1">The missing knowledge between AI agents and production Ethereum.</p>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">EthSkills</h3>
+                  <p className="text-sm text-gray-500 mt-1">
+                    The missing knowledge between AI agents and production Ethereum.
+                  </p>
                 </div>
               </div>
               <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
