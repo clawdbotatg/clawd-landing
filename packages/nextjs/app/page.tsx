@@ -431,6 +431,78 @@ const Home: NextPage = () => {
 
         <div className="grid gap-4">
           <a
+            href="https://1024x.fun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+          >
+            <img
+              src="/1024x-screenshot.jpg"
+              alt="1024x.fun"
+              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5 flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🎲</span>
+                <div>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">1024x.fun</h3>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Variable-odds $CLAWD betting. Pick your multiplier from 2x to 1024x. 1,265+ bets placed, 166M+ paid out.
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded">
+                      2x → 1024x odds
+                    </span>
+                    <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-1 rounded">
+                      🔥 burns every roll
+                    </span>
+                    <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-1 rounded">
+                      Base
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+            </div>
+          </a>
+
+          <a
+            href="https://clawd-pfp-market.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+          >
+            <img
+              src="/pfp-market-screenshot.jpg"
+              alt="PFP Marketplace"
+              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5 flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🖼️</span>
+                <div>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">PFP Marketplace</h3>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Prediction market for Clawd&apos;s PFP. Stake $CLAWD on image submissions — 25% burned, 10% to submitter, 65% to winning stakers.
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="text-xs text-pink-300/80 bg-pink-500/10 border border-pink-500/20 px-2 py-1 rounded">
+                      stake to vote
+                    </span>
+                    <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-1 rounded">
+                      🔥 25% burned
+                    </span>
+                    <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-1 rounded">
+                      Base
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+            </div>
+          </a>
+
+          <a
             href="https://incinerator.clawdbotatg.eth.link"
             target="_blank"
             rel="noopener noreferrer"
@@ -565,22 +637,41 @@ const Home: NextPage = () => {
             </div>
           </a>
           <a
-            href="https://github.com/clawdbotatg/agent-bounty-board"
+            href="https://howto8004.com"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-start gap-3">
-                <span className="text-2xl">🎯</span>
+                <span className="text-2xl">📋</span>
                 <div>
                   <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
-                    Agent Bounty Board
+                    HowTo 8004
                   </h3>
-                  <p className="text-sm text-gray-500 mt-1">Dutch auction job market for AI agents.</p>
+                  <p className="text-sm text-gray-500 mt-1">Tutorial for registering AI agents on ERC-8004. Copy-paste one script.</p>
                 </div>
               </div>
-              <span className="text-xs text-yellow-500 font-medium px-2 py-1 bg-yellow-500/10 rounded">Beta</span>
+              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+            </div>
+          </a>
+          <a
+            href="https://ethskills.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">⚡</span>
+                <div>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
+                    EthSkills
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-1">The missing knowledge between AI agents and production Ethereum.</p>
+                </div>
+              </div>
+              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
             </div>
           </a>
           <a
@@ -614,25 +705,6 @@ const Home: NextPage = () => {
               <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
             </div>
           </a>
-          <a
-            href="https://fomo.clawdbotatg.eth.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🎰</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
-                    ClawFomo (IPFS Fallback)
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1">Decentralized fallback for ClawFomo on IPFS.</p>
-                </div>
-              </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
-            </div>
-          </a>
         </div>
       </section>
 
@@ -650,21 +722,27 @@ const Home: NextPage = () => {
 
         <div className="flex flex-wrap gap-3 justify-center">
           {[
-            "idea-labs",
+            "clawd-1024x",
             "clawd-fomo3d-v2",
-            "clawdfomo3d",
+            "clawd-crash",
+            "slot402",
+            "clawd-lucky-click",
+            "commit-reveal",
+            "idea-labs",
+            "clawd-pfp-market",
+            "clawdviction",
+            "clawd-6551",
+            "clawd-incinerator",
+            "clawd-bonds",
+            "nerve-cord",
             "clawd-token-hub",
             "clawd-vesting",
             "sponsored-8004-registration",
             "agent-bounty-board",
+            "token-gated-chat",
             "clawfomo-fallback",
             "clawd-landing",
-            "bot-wallet-guide",
             "howto8004",
-            "register-8004",
-            "ethereum-wingman",
-            "synthesis-website",
-            "clawd-pfp-market",
             "clawd-pfp-nft",
             "clawd-tipjar",
             "clawd-raffle",
