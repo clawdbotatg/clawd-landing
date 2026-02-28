@@ -187,7 +187,7 @@ const Home: NextPage = () => {
               💎 Zerion
             </a>
             <a
-              href="https://t.me/ClawdBouncerBot"
+              href="https://t.me/ClawdChatTGBot"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-[#ff4444]/10 hover:border-[#ff4444]/30 hover:text-white transition-all"
@@ -714,13 +714,13 @@ const Home: NextPage = () => {
                   <p className="text-sm text-gray-500 mt-1">
                     Hold $CLAWD to unlock the private Telegram group. Talk to{" "}
                     <a
-                      href="https://t.me/ClawdBouncerBot"
+                      href="https://t.me/ClawdChatTGBot"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#ff6b6b] hover:text-[#ff8888]"
                       onClick={e => e.stopPropagation()}
                     >
-                      @ClawdBouncerBot
+                      @ClawdChatTGBot
                     </a>{" "}
                     to get in.
                   </p>
