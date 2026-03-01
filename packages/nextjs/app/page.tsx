@@ -607,14 +607,17 @@ const Home: NextPage = () => {
                     Liquidity Vesting
                   </h3>
                   <p className="text-sm text-gray-500 mt-1">
-                    Lock WETH + CLAWD into a Uniswap V3 full-range position and linearly vest liquidity back over a configurable duration. Claim trading fees while locked.
+                    Lock WETH + CLAWD into a Uniswap V3 full-range position and linearly vest liquidity back over a configurable duration. Earns swap fees the whole time. Owned by the 3/6 multisig Safe.
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded">
                       Uniswap V3
                     </span>
                     <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-1 rounded">
-                      claim fees
+                      earns fees
+                    </span>
+                    <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded">
+                      3/6 multisig
                     </span>
                     <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-1 rounded">
                       Base
