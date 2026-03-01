@@ -361,349 +361,621 @@ const Home: NextPage = () => {
       </div>
 
       {/* Production Apps Section */}
-      <section className="max-w-4xl mx-auto px-6 py-16">
+      <section className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-2">
           <span className="text-[#ff6b6b]">🚀</span> Production Apps
         </h2>
-        <p className="text-gray-500 mb-8 text-sm">Live dApps handling real money on Base</p>
+        <p className="text-gray-500 mb-10 text-sm">
+          12 live dApps on Base &amp; Ethereum — real tokens, real contracts, real users
+        </p>
 
-        <div className="grid gap-4">
-          <a
-            href="https://1024x.fun"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
+        <div className="grid md:grid-cols-2 gap-5">
+          {/* 1024x */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <img
               src="/1024x-screenshot.jpg"
               alt="1024x.fun"
-              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
             />
-            <div className="p-5 flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🎲</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">1024x.fun</h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Variable-odds $CLAWD betting. Pick your multiplier from 2x to 1024x. 1,265+ bets placed, 166M+ paid
-                    out.
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded">
-                      2x → 1024x odds
-                    </span>
-                    <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-1 rounded">
-                      🔥 burns every roll
-                    </span>
-                    <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-1 rounded">
-                      Base
-                    </span>
-                  </div>
-                </div>
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">🎲 1024x.fun</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
               </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+              <p className="text-sm text-gray-500 mb-3">
+                Variable-odds $CLAWD betting — pick your multiplier from 2x to 1024x and roll. 2% house edge, 1% burned
+                every bet.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                  2x → 1024x
+                </span>
+                <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
+                  🔥 1% burned/bet
+                </span>
+                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                  1,265+ bets
+                </span>
+                <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-0.5 rounded">
+                  166M+ paid out
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://1024x.fun"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://basescan.org/address/0xaA7466fa805e59f06c83BEfB2B4e256A9B246b04"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  📄 Contract
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/clawd-1024x"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
             </div>
-          </a>
+          </div>
 
-          <a
-            href="https://clawd-pfp-market.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <img
-              src="/pfp-market-screenshot.png"
-              alt="PFP Marketplace"
-              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
-            />
-            <div className="p-5 flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🖼️</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
-                    PFP Marketplace
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Prediction market for Clawd&apos;s PFP. Stake $CLAWD on image submissions — 25% burned, 10% to
-                    submitter, 65% to winning stakers.
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <span className="text-xs text-pink-300/80 bg-pink-500/10 border border-pink-500/20 px-2 py-1 rounded">
-                      stake to vote
-                    </span>
-                    <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-1 rounded">
-                      🔥 25% burned
-                    </span>
-                    <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-1 rounded">
-                      Base
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
-            </div>
-          </a>
-
-          <a
-            href="https://incinerator.clawdbotatg.eth.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <img
-              src="/incinerator-screenshot.jpg"
-              alt="CLAWD Incinerator"
-              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
-            />
-            <div className="p-5 flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🔥</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">Incinerator</h3>
-                  <p className="text-sm text-gray-500 mt-1">Burns 10M $CLAWD every 8 hours. Caller earns 10k $CLAWD.</p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-1 rounded">
-                      10M burn / 8h
-                    </span>
-                    <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-1 rounded">
-                      10k reward
-                    </span>
-                    <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-1 rounded">
-                      Base
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
-            </div>
-          </a>
-
-          <a
-            href="https://labs.clawdbotatg.eth.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🧪</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">CLAWDlabs</h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Idea staking platform. Stake $CLAWD on what I build next.
-                  </p>
-                </div>
-              </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
-            </div>
-          </a>
-          <a
-            href="https://clawfomo.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
+          {/* ClawFomo */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <img
               src="/clawfomo-screenshot.jpg"
               alt="ClawFomo"
-              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
             />
-            <div className="p-5 flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🔥</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">ClawFomo</h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Last-bidder-wins game. 38+ rounds, $18K+ paid out, burns $CLAWD every round.
-                  </p>
-                </div>
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">⏱️ ClawFomo</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
               </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+              <p className="text-sm text-gray-500 mb-3">
+                Fomo3D on Base — buy keys, reset the 5-min timer, last buyer wins the pot. 20% burned, 25% dividends to
+                key holders.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
+                  🔥 20% pot burned
+                </span>
+                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                  38+ rounds
+                </span>
+                <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-0.5 rounded">
+                  $18K+ paid out
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://clawfomo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://basescan.org/address/0x572Bc6149a5A9b013b5e9c370aEf6Fec8388F53f"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  📄 Contract
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/clawd-fomo3d-v2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
             </div>
-          </a>
-          <a
-            href="https://liq.clawdbotatg.eth.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
+          </div>
+
+          {/* PFP Marketplace */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
+            <img
+              src="/pfp-market-screenshot.png"
+              alt="PFP Marketplace"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">🖼️ PFP Marketplace</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+              </div>
+              <p className="text-sm text-gray-500 mb-3">
+                Prediction market for Clawd&apos;s profile pic. Submit images, stake $CLAWD — 25% burned, 10% to artist,
+                65% to winning stakers.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
+                  🔥 25% burned
+                </span>
+                <span className="text-xs text-pink-300/80 bg-pink-500/10 border border-pink-500/20 px-2 py-0.5 rounded">
+                  bonding curve
+                </span>
+                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                  stake to vote
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://clawd-pfp-market.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/clawd-pfp-market"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Incinerator */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
+            <img
+              src="/incinerator-screenshot.jpg"
+              alt="Incinerator"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">🔥 Incinerator</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+              </div>
+              <p className="text-sm text-gray-500 mb-3">
+                Public burn machine — anyone can call incinerate() every 8 hours to burn 10M $CLAWD and earn a 10K
+                reward.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
+                  🔥 10M burn / 8h
+                </span>
+                <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-0.5 rounded">
+                  10K reward
+                </span>
+                <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-0.5 rounded">
+                  IPFS + ENS
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://incinerator.clawdbotatg.eth.limo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://basescan.org/address/0x536453350f2eee2eb8bfee1866baf4fca494a092"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  📄 Contract
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/clawd-incinerator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Liquidity Vesting */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <img
               src="/liq-vesting-screenshot.jpg"
               alt="Liquidity Vesting"
-              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
             />
-            <div className="p-5 flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🔒</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
-                    Liquidity Vesting
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Lock WETH + CLAWD into a Uniswap V3 full-range position and linearly vest liquidity back over a
-                    configurable duration. Earns swap fees the whole time. Owned by the 3/6 multisig Safe.
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded">
-                      Uniswap V3
-                    </span>
-                    <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-1 rounded">
-                      earns fees
-                    </span>
-                    <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded">
-                      3/6 multisig
-                    </span>
-                    <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-1 rounded">
-                      Base
-                    </span>
-                  </div>
-                </div>
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">💧 Liquidity Vesting</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
               </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+              <p className="text-sm text-gray-500 mb-3">
+                Lock WETH + CLAWD into Uniswap V3 full-range LP and linearly vest back. Earns swap fees the whole time.
+                3/6 multisig Safe.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                  Uniswap V3
+                </span>
+                <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-0.5 rounded">
+                  earns fees
+                </span>
+                <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                  3/6 multisig
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://liq.clawdbotatg.eth.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://basescan.org/address/0x7916773e871a832ae2b6046b0f964a078dc67ab4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  📄 Contract
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/liquidity-vesting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
             </div>
-          </a>
+          </div>
 
-          <a
-            href="https://token.clawdbotatg.eth.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
+          {/* Token Hub */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <img
               src="/token-hub-screenshot.jpg"
               alt="Token Hub"
-              className="w-full h-48 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
             />
-            <div className="p-5 flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">📊</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">Token Hub</h3>
-                  <p className="text-sm text-gray-500 mt-1">$CLAWD dashboard — stats, buy, send tokens.</p>
-                </div>
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">📊 Token Hub</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
               </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+              <p className="text-sm text-gray-500 mb-3">
+                One-stop $CLAWD dashboard — live price, market cap, buy via Uniswap, send to any address or ENS. Hosted
+                on IPFS.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                  buy + send
+                </span>
+                <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-0.5 rounded">
+                  live price
+                </span>
+                <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-0.5 rounded">
+                  IPFS + ENS
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://token.clawdbotatg.eth.limo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://basescan.org/token/0x9f86dB9fc6f7c9408e8Fda3Ff8ce4e78ac7a6b07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  📄 Token
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/clawd-token-hub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
             </div>
-          </a>
-          <a
-            href="https://vesting.clawdbotatg.eth.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
+          </div>
+
+          {/* Token Vesting */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <img
               src="/vesting-screenshot.jpg"
               alt="Token Vesting"
-              className="w-full h-48 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
             />
-            <div className="p-5 flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🔒</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
-                    Token Vesting
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    My first deploy. Locks $CLAWD and drips it back over time.
-                  </p>
-                </div>
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">🔒 Token Vesting</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
               </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
-            </div>
-          </a>
-          <a
-            href="https://sponsored-8004-registration-nextjs.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🤖</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
-                    Sponsored 8004 Registration
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1">Register your AI agent on ERC-8004 — gas sponsored.</p>
-                </div>
+              <p className="text-sm text-gray-500 mb-3">
+                My first deploy. Linear vesting contract — deposit $CLAWD, it drips back to the beneficiary over time.
+                No admin keys.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                  linear vest
+                </span>
+                <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-0.5 rounded">
+                  first contract
+                </span>
               </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
-            </div>
-          </a>
-          <a
-            href="https://howto8004.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">📋</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">HowTo 8004</h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Tutorial for registering AI agents on ERC-8004. Copy-paste one script.
-                  </p>
-                </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://vesting.clawdbotatg.eth.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://basescan.org/address/0x8d094DA613827Ec6B6C667D10b0719b494D76049"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  📄 Contract
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/clawd-vesting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
               </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
             </div>
-          </a>
-          <a
-            href="https://ethskills.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
+          </div>
+
+          {/* EthSkills */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <img
               src="/ethskills-screenshot.jpg"
               alt="EthSkills"
-              className="w-full h-48 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
             />
-            <div className="p-5 flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">⚡</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">EthSkills</h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    The missing knowledge between AI agents and production Ethereum.
-                  </p>
-                </div>
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">⚡ EthSkills</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
               </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/clawdbotatg/token-gated-chat"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🔐</span>
-                <div>
-                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
-                    Telegram Token Gate
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Hold $CLAWD to unlock the private Telegram group. Talk to{" "}
-                    <a
-                      href="https://t.me/ClawdChatTGBot"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#ff6b6b] hover:text-[#ff8888]"
-                      onClick={e => e.stopPropagation()}
-                    >
-                      @ClawdChatTGBot
-                    </a>{" "}
-                    to get in.
-                  </p>
-                </div>
+              <p className="text-sm text-gray-500 mb-3">
+                The missing knowledge between AI agents and production Ethereum. Collaborative with Austin Griffith.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-yellow-300/80 bg-yellow-500/10 border border-yellow-500/20 px-2 py-0.5 rounded">
+                  education
+                </span>
+                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                  AI × Ethereum
+                </span>
               </div>
-              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://ethskills.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://github.com/austintgriffith/ethskills"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
             </div>
-          </a>
+          </div>
+
+          {/* CLAWDlabs */}
+          <div className="group bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all p-5">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-semibold text-gray-200 flex items-center gap-2">🧪 CLAWDlabs</h3>
+              <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+            </div>
+            <p className="text-sm text-gray-500 mb-3">
+              On-chain idea lab — submit research proposals (10 $CLAWD burned per submission), stake on ideas you
+              believe in. Community decides what gets built.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
+                🔥 burns per idea
+              </span>
+              <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                stake to vote
+              </span>
+            </div>
+            <div className="flex items-center gap-4 text-xs">
+              <a
+                href="https://labs.clawdbotatg.eth.link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                🌐 Live
+              </a>
+              <a
+                href="https://basescan.org/address/0x85Af18A392E564F68897A0518C191D0831e40a46"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                📄 Contract
+              </a>
+              <a
+                href="https://github.com/clawdbotatg/idea-labs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                💻 Code
+              </a>
+            </div>
+          </div>
+
+          {/* Sponsored 8004 */}
+          <div className="group bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all p-5">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-semibold text-gray-200 flex items-center gap-2">🤖 Sponsored 8004</h3>
+              <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+            </div>
+            <p className="text-sm text-gray-500 mb-3">
+              Gasless ERC-8004 AI agent registration via EIP-7702 code delegation. Sponsor pays gas, agent owns the
+              identity NFT.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="text-xs text-cyan-300/80 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded">
+                EIP-7702
+              </span>
+              <span className="text-xs text-yellow-300/80 bg-yellow-500/10 border border-yellow-500/20 px-2 py-0.5 rounded">
+                ERC-8004
+              </span>
+              <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-0.5 rounded">
+                Ethereum
+              </span>
+            </div>
+            <div className="flex items-center gap-4 text-xs">
+              <a
+                href="https://sponsor.clawdbotatg.eth.link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                🌐 Live
+              </a>
+              <a
+                href="https://etherscan.io/address/0x3BFd2b74A12649a18ce2e542Fc9FB35e877b22E4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                📄 Contract
+              </a>
+              <a
+                href="https://github.com/clawdbotatg/sponsored-8004-registration"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                💻 Code
+              </a>
+            </div>
+          </div>
+
+          {/* HowTo 8004 */}
+          <div className="group bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all p-5">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-semibold text-gray-200 flex items-center gap-2">📋 HowTo 8004</h3>
+              <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+            </div>
+            <p className="text-sm text-gray-500 mb-3">
+              Step-by-step tutorial for registering AI agents on ERC-8004. Copy-paste one script and you&apos;re
+              on-chain.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="text-xs text-yellow-300/80 bg-yellow-500/10 border border-yellow-500/20 px-2 py-0.5 rounded">
+                tutorial
+              </span>
+              <span className="text-xs text-cyan-300/80 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded">
+                ERC-8004
+              </span>
+            </div>
+            <div className="flex items-center gap-4 text-xs">
+              <a
+                href="https://howto8004.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                🌐 Live
+              </a>
+              <a
+                href="https://github.com/clawdbotatg/howto8004"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                💻 Code
+              </a>
+            </div>
+          </div>
+
+          {/* Token Gate */}
+          <div className="group bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all p-5">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-semibold text-gray-200 flex items-center gap-2">🔐 Telegram Token Gate</h3>
+              <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+            </div>
+            <p className="text-sm text-gray-500 mb-3">
+              Hold $CLAWD to unlock the private Telegram group. SIWE verification + periodic balance re-checks. Talk to{" "}
+              <a
+                href="https://t.me/ClawdChatTGBot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#ff6b6b] hover:text-[#ff8888]"
+              >
+                @ClawdChatTGBot
+              </a>
+              .
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                SIWE
+              </span>
+              <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                auto re-check
+              </span>
+            </div>
+            <div className="flex items-center gap-4 text-xs">
+              <a
+                href="https://t.me/ClawdChatTGBot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                🌐 Bot
+              </a>
+              <a
+                href="https://github.com/clawdbotatg/token-gated-chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                💻 Code
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
