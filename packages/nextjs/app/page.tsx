@@ -7,9 +7,6 @@ import { base } from "viem/chains";
 
 const CLAWD_TOKEN = "0x9f86dB9fc6f7c9408e8Fda3Ff8ce4e78ac7a6b07";
 const SAFE_ADDRESS = "0x90eF2A9211A3E7CE788561E5af54C76B0Fa3aEd0";
-const VESTING_CONTRACT = "0xf2eb1cc702e2b7664382a793a790fc65d318003e";
-const MY_WALLET = "0x11ce532845cE0eAcdA41f72FDc1C88c335981442";
-
 // Common burn sink (irrecoverable)
 const BURN_ADDRESS = "0x000000000000000000000000000000000000dEaD";
 
@@ -52,15 +49,11 @@ function formatUsd(value: number): string {
 const Home: NextPage = () => {
   const [treasuryData, setTreasuryData] = useState<{
     safeBalance: bigint | null;
-    vestingBalance: bigint | null;
-    walletBalance: bigint | null;
     burnBalance: bigint | null;
     totalSupply: bigint | null;
     priceUsd: number | null;
   }>({
     safeBalance: null,
-    vestingBalance: null,
-    walletBalance: null,
     burnBalance: null,
     totalSupply: null,
     priceUsd: null,
@@ -69,24 +62,12 @@ const Home: NextPage = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const [safeBalance, vestingBalance, walletBalance, burnBalance, totalSupply] = await Promise.all([
+        const [safeBalance, burnBalance, totalSupply] = await Promise.all([
           publicClient.readContract({
             address: CLAWD_TOKEN,
             abi: ERC20_ABI,
             functionName: "balanceOf",
             args: [SAFE_ADDRESS],
-          }),
-          publicClient.readContract({
-            address: CLAWD_TOKEN,
-            abi: ERC20_ABI,
-            functionName: "balanceOf",
-            args: [VESTING_CONTRACT],
-          }),
-          publicClient.readContract({
-            address: CLAWD_TOKEN,
-            abi: ERC20_ABI,
-            functionName: "balanceOf",
-            args: [MY_WALLET],
           }),
           publicClient.readContract({
             address: CLAWD_TOKEN,
@@ -112,7 +93,7 @@ const Home: NextPage = () => {
           console.error("Price fetch failed", e);
         }
 
-        setTreasuryData({ safeBalance, vestingBalance, walletBalance, burnBalance, totalSupply, priceUsd });
+        setTreasuryData({ safeBalance, burnBalance, totalSupply, priceUsd });
       } catch (e) {
         console.error("Failed to fetch treasury data", e);
       }
@@ -251,54 +232,6 @@ const Home: NextPage = () => {
             {treasuryData.safeBalance !== null && price && (
               <div className="text-sm text-gray-500">
                 ≈ {formatUsd(Number(formatUnits(treasuryData.safeBalance, 18)) * price)}
-              </div>
-            )}
-          </a>
-
-          {/* Vesting Contract */}
-          <a
-            href="https://vesting.clawdbotatg.eth.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-6 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">⏳</span>
-              <span className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors">
-                Vesting Contract
-              </span>
-            </div>
-            <div className="text-xs text-gray-600 font-mono mb-3">vesting.clawdbotatg.eth</div>
-            <div className="text-3xl font-black text-white mb-1">
-              {treasuryData.vestingBalance !== null ? formatClawd(treasuryData.vestingBalance) : "..."}{" "}
-              <span className="text-[#ff6b6b] text-lg">CLAWD</span>
-            </div>
-            {treasuryData.vestingBalance !== null && price && (
-              <div className="text-sm text-gray-500">
-                ≈ {formatUsd(Number(formatUnits(treasuryData.vestingBalance, 18)) * price)}
-              </div>
-            )}
-          </a>
-
-          {/* My Wallet */}
-          <a
-            href={`https://basescan.org/token/${CLAWD_TOKEN}?a=${MY_WALLET}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-6 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-          >
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">🤖</span>
-              <span className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors">My Wallet</span>
-            </div>
-            <div className="text-xs text-gray-600 font-mono mb-3">clawdbotatg.eth</div>
-            <div className="text-3xl font-black text-white mb-1">
-              {treasuryData.walletBalance !== null ? formatClawd(treasuryData.walletBalance) : "..."}{" "}
-              <span className="text-[#ff6b6b] text-lg">CLAWD</span>
-            </div>
-            {treasuryData.walletBalance !== null && price && (
-              <div className="text-sm text-gray-500">
-                ≈ {formatUsd(Number(formatUnits(treasuryData.walletBalance, 18)) * price)}
               </div>
             )}
           </a>
@@ -607,7 +540,8 @@ const Home: NextPage = () => {
                     Liquidity Vesting
                   </h3>
                   <p className="text-sm text-gray-500 mt-1">
-                    Lock WETH + CLAWD into a Uniswap V3 full-range position and linearly vest liquidity back over a configurable duration. Earns swap fees the whole time. Owned by the 3/6 multisig Safe.
+                    Lock WETH + CLAWD into a Uniswap V3 full-range position and linearly vest liquidity back over a
+                    configurable duration. Earns swap fees the whole time. Owned by the 3/6 multisig Safe.
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded">
