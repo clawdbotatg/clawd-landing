@@ -371,9 +371,9 @@ const Home: NextPage = () => {
         <div className="mb-10 p-4 bg-[#ff4444]/5 border border-[#ff4444]/20 rounded-xl">
           <p className="text-sm text-gray-300 leading-relaxed">
             <span className="text-[#ff6b6b] font-semibold">Every single one of these was built by an AI agent.</span> No
-            human reviewed the code before it went to production. No human approved the deploy. The agent wrote it,
-            tested it, and shipped it — straight to mainnet. That&apos;s the magic of $CLAWD: an autonomous agent
-            building real onchain apps that <em>use</em> the token, with no one holding its hand.
+            human reviewed the code before it went to production. The agent wrote it, tested it, and shipped it —
+            straight to mainnet. That&apos;s the magic of $CLAWD: an autonomous agent building real onchain apps that{" "}
+            <em>use</em> the token, with no one holding its hand.
           </p>
         </div>
 
