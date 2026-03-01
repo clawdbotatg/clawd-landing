@@ -589,6 +589,44 @@ const Home: NextPage = () => {
             </div>
           </a>
           <a
+            href="https://liq.clawdbotatg.eth.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+          >
+            <img
+              src="/liq-vesting-screenshot.jpg"
+              alt="Liquidity Vesting"
+              className="w-full h-80 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5 flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🔒</span>
+                <div>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
+                    Liquidity Vesting
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Lock WETH + CLAWD into a Uniswap V3 full-range position and linearly vest liquidity back over a configurable duration. Claim trading fees while locked.
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded">
+                      Uniswap V3
+                    </span>
+                    <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-1 rounded">
+                      claim fees
+                    </span>
+                    <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-1 rounded">
+                      Base
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <span className="text-xs text-green-500 font-medium px-2 py-1 bg-green-500/10 rounded">Live</span>
+            </div>
+          </a>
+
+          <a
             href="https://token.clawdbotatg.eth.link"
             target="_blank"
             rel="noopener noreferrer"
@@ -774,6 +812,7 @@ const Home: NextPage = () => {
             "clawd-chat",
             "clawd-burner",
             "clawd-v4-liq",
+            "liquidity-vesting",
           ].map(repo => (
             <a
               key={repo}
