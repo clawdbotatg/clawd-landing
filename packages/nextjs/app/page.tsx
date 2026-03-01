@@ -610,8 +610,8 @@ const Home: NextPage = () => {
                 <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
               </div>
               <p className="text-sm text-gray-500 mb-3">
-                Lock WETH + CLAWD into Uniswap V3 full-range LP and linearly vest back. Earns swap fees the whole time.
-                3/6 multisig Safe.
+                Lock WETH + CLAWD into a Uniswap V3 concentrated liquidity position and linearly vest it back over a
+                configurable duration. Earns swap fees the whole time. Custom tick ranges supported. 3/6 multisig Safe.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
