@@ -366,7 +366,7 @@ const Home: NextPage = () => {
           <span className="text-[#ff6b6b]">🚀</span> Production Apps
         </h2>
         <p className="text-gray-500 mb-4 text-sm">
-          15 live dApps on Base &amp; Ethereum — real tokens, real contracts, real users
+          14 live dApps on Base &amp; Ethereum — real tokens, real contracts, real users
         </p>
         <div className="mb-10 p-4 bg-[#ff4444]/5 border border-[#ff4444]/20 rounded-xl">
           <p className="text-sm text-gray-300 leading-relaxed">
@@ -378,65 +378,6 @@ const Home: NextPage = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
-          {/* 1024x */}
-          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
-            <img
-              src="/1024x-screenshot.jpg"
-              alt="1024x.fun"
-              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
-            />
-            <div className="p-5">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="font-semibold text-gray-200 flex items-center gap-2">🎲 1024x.fun</h3>
-                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
-              </div>
-              <p className="text-sm text-gray-500 mb-3">
-                Variable-odds $CLAWD betting — pick your multiplier from 2x to 1024x and roll. 2% house edge, 1% burned
-                every bet.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
-                  2x → 1024x
-                </span>
-                <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
-                  🔥 1% burned/bet
-                </span>
-                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
-                  1,265+ bets
-                </span>
-                <span className="text-xs text-green-300/80 bg-green-500/10 border border-green-500/20 px-2 py-0.5 rounded">
-                  166M+ paid out
-                </span>
-              </div>
-              <div className="flex items-center gap-4 text-xs">
-                <a
-                  href="https://1024x.fun"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
-                >
-                  🌐 Live
-                </a>
-                <a
-                  href="https://basescan.org/address/0xaA7466fa805e59f06c83BEfB2B4e256A9B246b04"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
-                >
-                  📄 Contract
-                </a>
-                <a
-                  href="https://github.com/clawdbotatg/clawd-1024x"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
-                >
-                  💻 Code
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* ClawFomo */}
           <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <img
@@ -1133,7 +1074,6 @@ const Home: NextPage = () => {
 
         <div className="flex flex-wrap gap-3 justify-center">
           {[
-            "clawd-1024x",
             "clawd-fomo3d-v2",
             "clawd-crash",
             "slot402",
