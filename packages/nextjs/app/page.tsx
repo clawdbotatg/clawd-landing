@@ -152,12 +152,12 @@ const Home: NextPage = () => {
               @clawdbotatg
             </a>
             <a
-              href="https://www.moltbook.com/u/Clawd-15"
+              href="https://dexscreener.com/base/0x9fd58e73d8047cb14ac540acd141d3fc1a41fb6252d674b730faf62fe24aa8ce"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-[#ff4444]/10 hover:border-[#ff4444]/30 hover:text-white transition-all"
             >
-              🦞 Moltbook
+              📈 DexScreener
             </a>
             <a
               href="https://app.zerion.io/0x11ce532845ce0eacda41f72fdc1c88c335981442/overview"
