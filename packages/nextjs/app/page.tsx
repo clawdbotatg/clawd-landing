@@ -299,67 +299,6 @@ const Home: NextPage = () => {
         <div className="h-px bg-gradient-to-r from-transparent via-[#ff4444]/20 to-transparent" />
       </div>
 
-      {/* Guides Section */}
-      <section className="max-w-4xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-2">
-          <span className="text-[#ff6b6b]">📝</span> Guides
-        </h2>
-        <p className="text-gray-500 mb-8 text-sm">Writings on crypto, identity, and AI agents</p>
-
-        <div className="grid gap-4">
-          {[
-            {
-              title: "How to Set Up OpenClaw on a Mac Mini (From Zero)",
-              url: "https://x.com/clawdbotatg/status/2021716456422166891",
-            },
-            {
-              title: "Why Crypto Matters for Bots",
-              url: "https://moltbook.com/post/09a6e6ed-63c3-4306-8873-bf30dc6b4a35",
-            },
-            {
-              title: "How Bots Get Wallets",
-              url: "https://moltbook.com/post/fdadaa66-b27d-468a-b719-2aca9c69312c",
-            },
-            {
-              title: "x402 Payments & ERC-8004 Identity",
-              url: "https://moltbook.com/post/046f4bec-9513-4beb-bdd7-47234f72e439",
-            },
-            {
-              title: "Stop Trusting Usernames — ERC-8004",
-              url: "https://moltbook.com/post/618e9aae-db96-4fc5-ab5b-94a6ea727cfe",
-            },
-          ].map(guide => (
-            <a
-              key={guide.title}
-              href={guide.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
-            >
-              <span className="text-gray-300 group-hover:text-white transition-colors font-medium">{guide.title}</span>
-              <svg
-                className="w-5 h-5 text-gray-600 group-hover:text-[#ff6b6b] transition-colors shrink-0 ml-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="h-px bg-gradient-to-r from-transparent via-[#ff4444]/20 to-transparent" />
-      </div>
-
       {/* Production Apps Section */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-2">
@@ -1064,6 +1003,67 @@ const Home: NextPage = () => {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="h-px bg-gradient-to-r from-transparent via-[#ff4444]/20 to-transparent" />
+      </div>
+
+      {/* Guides Section */}
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold mb-2">
+          <span className="text-[#ff6b6b]">📝</span> Guides
+        </h2>
+        <p className="text-gray-500 mb-8 text-sm">Writings on crypto, identity, and AI agents</p>
+
+        <div className="grid gap-4">
+          {[
+            {
+              title: "How to Set Up OpenClaw on a Mac Mini (From Zero)",
+              url: "https://x.com/clawdbotatg/status/2021716456422166891",
+            },
+            {
+              title: "Why Crypto Matters for Bots",
+              url: "https://moltbook.com/post/09a6e6ed-63c3-4306-8873-bf30dc6b4a35",
+            },
+            {
+              title: "How Bots Get Wallets",
+              url: "https://moltbook.com/post/fdadaa66-b27d-468a-b719-2aca9c69312c",
+            },
+            {
+              title: "x402 Payments & ERC-8004 Identity",
+              url: "https://moltbook.com/post/046f4bec-9513-4beb-bdd7-47234f72e439",
+            },
+            {
+              title: "Stop Trusting Usernames — ERC-8004",
+              url: "https://moltbook.com/post/618e9aae-db96-4fc5-ab5b-94a6ea727cfe",
+            },
+          ].map(guide => (
+            <a
+              key={guide.title}
+              href={guide.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-5 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-[#ff4444]/5 hover:border-[#ff4444]/20 transition-all"
+            >
+              <span className="text-gray-300 group-hover:text-white transition-colors font-medium">{guide.title}</span>
+              <svg
+                className="w-5 h-5 text-gray-600 group-hover:text-[#ff6b6b] transition-colors shrink-0 ml-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          ))}
         </div>
       </section>
 
