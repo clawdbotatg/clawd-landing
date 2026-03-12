@@ -379,46 +379,53 @@ const Home: NextPage = () => {
 
         <div className="grid md:grid-cols-2 gap-5">
           {/* LarvAI */}
-          <div className="group bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all p-5">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="font-semibold text-gray-200 flex items-center gap-2">🐛 LarvAI</h3>
-              <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
-            </div>
-            <p className="text-sm text-gray-500 mb-3">
-              Stake $CLAWD to earn CONVICTION. Earn enough and you unlock your own larva — a personal AI agent that
-              learns your preferences and governs on your behalf. 420M conviction generated, 2.35B $CLAWD staked.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
-                governance
-              </span>
-              <span className="text-xs text-cyan-300/80 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded">
-                AI agent
-              </span>
-              <span className="text-xs text-yellow-300/80 bg-yellow-500/10 border border-yellow-500/20 px-2 py-0.5 rounded">
-                stake to earn
-              </span>
-              <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
-                2.35B staked
-              </span>
-            </div>
-            <div className="flex items-center gap-4 text-xs">
-              <a
-                href="https://larv.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
-              >
-                🌐 Live
-              </a>
-              <a
-                href="https://github.com/clawdbotatg/clawd-larvae"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
-              >
-                💻 Code
-              </a>
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
+            <img
+              src="/larvai-screenshot.jpg"
+              alt="LarvAI"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">🐛 LarvAI</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+              </div>
+              <p className="text-sm text-gray-500 mb-3">
+                Stake $CLAWD to earn CONVICTION. Unlock your own larva — a personal AI agent that learns your
+                preferences and governs on your behalf. 420M conviction generated, 2.35B $CLAWD staked.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                  governance
+                </span>
+                <span className="text-xs text-cyan-300/80 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded">
+                  AI agent
+                </span>
+                <span className="text-xs text-yellow-300/80 bg-yellow-500/10 border border-yellow-500/20 px-2 py-0.5 rounded">
+                  stake to earn
+                </span>
+                <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
+                  2.35B staked
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://larv.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/clawd-larvae"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
             </div>
           </div>
 
