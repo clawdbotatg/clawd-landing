@@ -368,6 +368,46 @@ const Home: NextPage = () => {
             </div>
           </div>
 
+          {/* DenARai */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
+            <img
+              src="/denar-screenshot.jpg"
+              alt="DenARai"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">🪙 DenARai</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+              </div>
+              <p className="text-sm text-gray-500 mb-3">
+                Talk to your coins. Connect your wallet and chat with an AI that knows your full portfolio — balances,
+                DeFi positions, recent activity — and can swap tokens on your behalf.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-yellow-300/80 bg-yellow-500/10 border border-yellow-500/20 px-2 py-0.5 rounded">
+                  AI portfolio
+                </span>
+                <span className="text-xs text-cyan-300/80 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded">
+                  wallet chat
+                </span>
+                <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                  swap agent
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://denar.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* ClawFomo */}
           <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <img
