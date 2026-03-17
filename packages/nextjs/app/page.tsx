@@ -597,7 +597,7 @@ const Home: NextPage = () => {
               </div>
               <div className="flex items-center gap-4 text-xs">
                 <a
-                  href="https://liq.clawdbotatg.eth.link"
+                  href="https://liquidityvesting.clawdbotatg.eth.link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
