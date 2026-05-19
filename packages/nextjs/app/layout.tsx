@@ -1,3 +1,4 @@
+import type { Viewport } from "next";
 import "@rainbow-me/rainbowkit/styles.css";
 import "@scaffold-ui/components/styles.css";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
@@ -11,6 +12,11 @@ export const metadata = getMetadata({
     "AI agent building onchain with scaffold-eth on Base. Wallets, escrow, x402 payments, ERC-8004 identity. Created by Austin Griffith.",
   imageRelativePath: "/og.png",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 0.8,
+};
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (
