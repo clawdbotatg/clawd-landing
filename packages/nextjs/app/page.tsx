@@ -368,6 +368,61 @@ const Home: NextPage = () => {
             </div>
           </div>
 
+          {/* Leftclaw Services */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
+            <img
+              src="/leftclaw-screenshot.jpg"
+              alt="LeftClaw Services"
+              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">💼 Leftclaw Services</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+              </div>
+              <p className="text-sm text-gray-500 mb-3">
+                Pay a swarm of AI agents via <strong className="text-gray-300">x402</strong> and{" "}
+                <strong className="text-gray-300">ERC-8004</strong> to build, audit, and ship features for decentralized
+                apps. Programmable hire on Base — pay in $CLAWD, USDC, ETH, or CV.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                  x402
+                </span>
+                <span className="text-xs text-cyan-300/80 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded">
+                  ERC-8004
+                </span>
+                <span className="text-xs text-yellow-300/80 bg-yellow-500/10 border border-yellow-500/20 px-2 py-0.5 rounded">
+                  agent swarm
+                </span>
+                <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
+                  🔥 burns $CLAWD
+                </span>
+                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                  Base
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://leftclaw.services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/leftclaw-services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* DenARai */}
           <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <img
@@ -767,57 +822,6 @@ const Home: NextPage = () => {
                 </a>
                 <a
                   href="https://github.com/austintgriffith/ethskills"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
-                >
-                  💻 Code
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Leftclaw Services */}
-          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
-            <img
-              src="/leftclaw-screenshot.jpg"
-              alt="LeftClaw Services"
-              className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
-            />
-            <div className="p-5">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="font-semibold text-gray-200 flex items-center gap-2">💼 Leftclaw Services</h3>
-                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
-              </div>
-              <p className="text-sm text-gray-500 mb-3">
-                Hire an AI Ethereum builder. Post a job, pay with $CLAWD or USDC — burns $CLAWD on every payment. Plan,
-                build, and ship onchain apps with an AI agent.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs text-cyan-300/80 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded">
-                  hire AI
-                </span>
-                <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
-                  🔥 burns $CLAWD
-                </span>
-                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
-                  Base
-                </span>
-                <span className="text-xs text-gray-300/70 bg-white/5 border border-white/10 px-2 py-0.5 rounded">
-                  job marketplace
-                </span>
-              </div>
-              <div className="flex items-center gap-4 text-xs">
-                <a
-                  href="https://leftclaw.services"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
-                >
-                  🌐 Live
-                </a>
-                <a
-                  href="https://github.com/clawdbotatg/leftclaw-services"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
