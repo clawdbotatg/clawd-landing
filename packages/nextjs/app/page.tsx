@@ -7,6 +7,7 @@ import { base } from "viem/chains";
 
 const CLAWD_TOKEN = "0x9f86dB9fc6f7c9408e8Fda3Ff8ce4e78ac7a6b07";
 const SAFE_ADDRESS = "0x90eF2A9211A3E7CE788561E5af54C76B0Fa3aEd0";
+const STAKING_CONTRACT = "0xC9E377FB98a1aA6Ecf4B553cE1b57940121213bf";
 // Common burn sink (irrecoverable)
 const BURN_ADDRESS = "0x000000000000000000000000000000000000dEaD";
 
@@ -20,6 +21,16 @@ const ERC20_ABI = [
   },
   {
     name: "totalSupply",
+    type: "function",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+] as const;
+
+const STAKING_ABI = [
+  {
+    name: "totalSupplyStaked",
     type: "function",
     stateMutability: "view",
     inputs: [],
@@ -51,18 +62,20 @@ const Home: NextPage = () => {
     safeBalance: bigint | null;
     burnBalance: bigint | null;
     totalSupply: bigint | null;
+    totalStaked: bigint | null;
     priceUsd: number | null;
   }>({
     safeBalance: null,
     burnBalance: null,
     totalSupply: null,
+    totalStaked: null,
     priceUsd: null,
   });
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const [safeBalance, burnBalance, totalSupply] = await Promise.all([
+        const [safeBalance, burnBalance, totalSupply, totalStaked] = await Promise.all([
           publicClient.readContract({
             address: CLAWD_TOKEN,
             abi: ERC20_ABI,
@@ -80,6 +93,11 @@ const Home: NextPage = () => {
             abi: ERC20_ABI,
             functionName: "totalSupply",
           }),
+          publicClient.readContract({
+            address: STAKING_CONTRACT,
+            abi: STAKING_ABI,
+            functionName: "totalSupplyStaked",
+          }),
         ]);
 
         let priceUsd = null;
@@ -93,7 +111,7 @@ const Home: NextPage = () => {
           console.error("Price fetch failed", e);
         }
 
-        setTreasuryData({ safeBalance, burnBalance, totalSupply, priceUsd });
+        setTreasuryData({ safeBalance, burnBalance, totalSupply, totalStaked, priceUsd });
       } catch (e) {
         console.error("Failed to fetch treasury data", e);
       }
@@ -102,6 +120,15 @@ const Home: NextPage = () => {
   }, []);
 
   const price = treasuryData.priceUsd;
+
+  const stakedPct =
+    treasuryData.totalStaked && treasuryData.totalSupply && treasuryData.burnBalance !== null
+      ? (() => {
+          const circulating = treasuryData.totalSupply - treasuryData.burnBalance;
+          if (circulating <= 0n) return null;
+          return (Number(formatUnits(treasuryData.totalStaked, 18)) / Number(formatUnits(circulating, 18))) * 100;
+        })()
+      : null;
 
   return (
     <div className="min-h-screen bg-[#0e0e14] text-white">
@@ -305,7 +332,11 @@ const Home: NextPage = () => {
               </div>
               <p className="text-sm text-gray-500 mb-3">
                 Stake $CLAWD to earn CONVICTION. Unlock your own larva — a personal AI agent that learns your
-                preferences and governs on your behalf. 420M conviction generated, 2.35B $CLAWD staked.
+                preferences and governs on your behalf. 420M conviction generated,{" "}
+                <strong className="text-gray-100 font-bold">
+                  {treasuryData.totalStaked ? formatClawd(treasuryData.totalStaked) : "—"}
+                </strong>
+                {stakedPct !== null && <span className="text-gray-300"> ({stakedPct.toFixed(1)}%)</span>} $CLAWD staked.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
@@ -318,7 +349,8 @@ const Home: NextPage = () => {
                   stake to earn
                 </span>
                 <span className="text-xs text-orange-300/80 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
-                  2.35B staked
+                  {treasuryData.totalStaked ? formatClawd(treasuryData.totalStaked) : "—"}
+                  {stakedPct !== null && ` (${stakedPct.toFixed(1)}%)`} staked
                 </span>
               </div>
               <div className="flex items-center gap-4 text-xs">
