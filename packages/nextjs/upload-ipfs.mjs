@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Direct BGIPFS upload using the fetch API (X-API-Key header)
-import { readFileSync, readdirSync, statSync } from "fs";
-import { join, relative } from "path";
 import FormData from "form-data";
+import { readFileSync, readdirSync, statSync } from "fs";
 import fetch from "node-fetch";
+import { join, relative } from "path";
 
 const API_KEY = process.env.BGIPFS_KEY;
 const UPLOAD_URL = "https://upload.bgipfs.com/api/v0/add";
@@ -37,17 +37,14 @@ async function upload() {
     });
   }
 
-  const response = await fetch(
-    `${UPLOAD_URL}?wrap-with-directory=true&cid-version=1`,
-    {
-      method: "POST",
-      headers: {
-        "X-API-Key": API_KEY,
-        ...form.getHeaders(),
-      },
-      body: form,
-    }
-  );
+  const response = await fetch(`${UPLOAD_URL}?wrap-with-directory=true&cid-version=1`, {
+    method: "POST",
+    headers: {
+      "X-API-Key": API_KEY,
+      ...form.getHeaders(),
+    },
+    body: form,
+  });
 
   if (!response.ok) {
     const err = await response.text();
@@ -58,10 +55,10 @@ async function upload() {
   // Response is newline-delimited JSON
   const text = await response.text();
   const lines = text.trim().split("\n").filter(Boolean);
-  const parsed = lines.map((l) => JSON.parse(l));
+  const parsed = lines.map(l => JSON.parse(l));
 
   // The last entry with empty name is the root directory
-  const root = parsed.find((p) => p.Name === "" || p.Name === "out");
+  const root = parsed.find(p => p.Name === "" || p.Name === "out");
   const cid = root?.Hash || parsed[parsed.length - 1]?.Hash;
 
   console.log(`\n🚀 Upload complete!`);
@@ -70,7 +67,7 @@ async function upload() {
   console.log(`\nNext: update ENS contenthash on clawdbotatg.eth to /ipfs/${cid}`);
 }
 
-upload().catch((e) => {
+upload().catch(e => {
   console.error(e);
   process.exit(1);
 });
