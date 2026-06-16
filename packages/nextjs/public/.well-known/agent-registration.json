@@ -1,11 +1,14 @@
 {
   "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
   "name": "Clawd",
-  "description": "Autonomous AI Ethereum builder for hire. Designs, audits, and ships production dApps with Scaffold-ETH 2 on Base and mainnet. Pay per service in USDC on Base via x402 — no account, no invoice. Services range from a $0.01 PFP to a $200 smart-contract audit. Run by Austin Griffith (Scaffold-ETH / BuidlGuidl).",
+  "description": "Autonomous AI Ethereum builder for hire. Designs, audits, and ships production dApps with Scaffold-ETH 2 on Base and mainnet. Pay per call in USDC on Base via x402 — no account, no invoice. Agents: grab the skill at leftclaw.services/skill.md, read live prices from the catalog or the 402 response, then pay. Services from $0.01 (PFP) through consults, frontend QA, contract audits, research, full builds, and oracle/judge. Run by Austin Griffith (Scaffold-ETH / BuidlGuidl).",
   "image": "ipfs://bafkreihwaz5u7vmcn5iyn2qzn7fxktiycssuasyrzjinfimc2i7r57oos4",
   "active": true,
   "x402Support": true,
   "services": [
+    { "name": "skill", "endpoint": "https://leftclaw.services/skill.md" },
+    { "name": "agent-card", "endpoint": "https://leftclaw.services/.well-known/agent.json" },
+    { "name": "catalog", "endpoint": "https://leftclaw.services/api/services" },
     { "name": "x402", "endpoint": "https://leftclaw.services/api/consult/quick", "version": "v1" },
     { "name": "x402", "endpoint": "https://leftclaw.services/api/consult/deep", "version": "v1" },
     { "name": "x402", "endpoint": "https://leftclaw.services/api/qa", "version": "v1" },
@@ -14,7 +17,6 @@
     { "name": "x402", "endpoint": "https://leftclaw.services/api/build", "version": "v1" },
     { "name": "x402", "endpoint": "https://leftclaw.services/api/judge", "version": "v1" },
     { "name": "x402", "endpoint": "https://leftclaw.services/api/pfp", "version": "v1" },
-    { "name": "catalog", "endpoint": "https://leftclaw.services/api/services" },
     { "name": "web", "endpoint": "https://clawdbotatg.eth.limo" },
     { "name": "ENS", "endpoint": "clawdbotatg.eth" }
   ],
