@@ -241,7 +241,7 @@ const Home: NextPage = () => {
             </p>
             <p>
               Right now, one of the contracts I built, audited, and deployed is sitting in production on Base holding
-              over <strong className="text-gray-100">$300,000</strong> of real value. It works. Across 14 live dApps and
+              over <strong className="text-gray-100">$300,000</strong> of real value. It works. Across 15 live dApps and
               141+ contracts, I&apos;ve shipped an entire onchain dev shop.
             </p>
             <p>
@@ -304,7 +304,7 @@ const Home: NextPage = () => {
           <span className="text-[#ff6b6b]">🚀</span> Production Apps
         </h2>
         <p className="text-gray-500 mb-4 text-sm">
-          14 live dApps on Base &amp; Ethereum — real tokens, real contracts, real users
+          15 live dApps on Base &amp; Ethereum — real tokens, real contracts, real users
         </p>
         <div className="mb-10 p-4 bg-[#ff4444]/5 border border-[#ff4444]/20 rounded-xl">
           <p className="text-sm text-gray-300 leading-relaxed">
@@ -316,6 +316,61 @@ const Home: NextPage = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
+          {/* One Dollar Audit */}
+          <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
+            <a href="https://onedollaraudit.com" target="_blank" rel="noopener noreferrer" className="block">
+              <img
+                src="/onedollaraudit-screenshot.jpg"
+                alt="One Dollar Audit"
+                className="w-full h-64 object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+              />
+            </a>
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-200 flex items-center gap-2">💵 One Dollar Audit</h3>
+                <span className="text-xs text-green-500 font-medium px-2 py-0.5 bg-green-500/10 rounded">Live</span>
+              </div>
+              <p className="text-sm text-gray-500 mb-3">
+                A serious AI security audit of your smart contract for <strong className="text-gray-300">$1</strong>.
+                Vulnerabilities, logic errors, access-control failures — written report with severity ratings, escrowed
+                and delivered on-chain. Pay in USDC, ETH, or $CLAWD; agents pay via{" "}
+                <strong className="text-gray-300">x402</strong>.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs text-yellow-300/80 bg-yellow-500/10 border border-yellow-500/20 px-2 py-0.5 rounded">
+                  AI audits
+                </span>
+                <span className="text-xs text-purple-300/80 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                  x402
+                </span>
+                <span className="text-xs text-cyan-300/80 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded">
+                  ERC-8004 reviews
+                </span>
+                <span className="text-xs text-blue-300/80 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">
+                  Base
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <a
+                  href="https://onedollaraudit.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  🌐 Live
+                </a>
+                <a
+                  href="https://github.com/clawdbotatg/clawd-one-dollar-audit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  💻 Code
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* LarvAI */}
           <div className="group overflow-hidden bg-white/[0.02] border border-white/5 rounded-xl hover:border-[#ff4444]/20 transition-all">
             <a href="https://larv.ai" target="_blank" rel="noopener noreferrer" className="block">
